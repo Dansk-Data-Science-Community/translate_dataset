@@ -1,7 +1,12 @@
 # translate_dataset
 A project for translating datasets to Danish
 
+# To do
+    make base "translator" class 
+    make MS marco specific child class of "translator"
+    
 
+# notes 
 flow:
 - use map on dataset to apply function. 
 - inside function, loop over columns. apply designated function to each column to extract string elements from row 
