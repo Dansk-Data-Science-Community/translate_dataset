@@ -2,7 +2,7 @@
 A project for translating datasets to Danish
 
 # To do
-- make base "translator" class 
+- make base "translator" class in "playground.py" and rename the file to something more sensible 
 - make MS marco specific child class of "translator"
     
 
