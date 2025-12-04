@@ -2,7 +2,7 @@
 A project for translating datasets to Danish
 
 # To do
-- make base "translator" class in "playground.py" and rename the file to something more sensible 
+- make generic base "translator" class in "playground.py" and rename the file to something more sensible. The base class shuld be designed to take translate one or more string columns in a HF dataset. Make it easy to extend to specialized cases such as MS marco where the columns we want to translate or not only string columns, but also columns with lists or json  
 - make MS marco specific child class of "translator"
     
 
