@@ -2,8 +2,8 @@
 A project for translating datasets to Danish
 
 # To do
-    make base "translator" class 
-    make MS marco specific child class of "translator"
+- make base "translator" class 
+- make MS marco specific child class of "translator"
     
 
 # notes 
