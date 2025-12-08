@@ -41,7 +41,7 @@ class Translator():
         # Only instantiate LLM if we're not in API mode
         self.llm = None
         if not use_api and hf_model_id is not None:
-            self.llm = LLM(model=hf_model_id, max_seq_len_to_capture=8000)
+            self.llm = LLM(model=hf_model_id)
 
     def call_translation_model_api(self, texts: list[str]) -> list[str]:
         """
