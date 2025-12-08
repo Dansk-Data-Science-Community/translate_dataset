@@ -31,20 +31,6 @@ class Translator():
         text_wrapper: PromptBuilder = default_prompt_builder,
     ):
         
-        """
-        Example usage:
-        
-        ```python
-        translator = Translator.from_model_id(
-        hf_model_id="google/gemma-3-27b-it",
-        cols_to_translate=cols_to_translate,
-        source_language="English",
-        target_language="Danish",
-        sampling_params=sampling_params,
-        max_seq_len_to_capture=8000,
-        )
-        ```
-        """
         
         self.use_api = use_api
         self.cols_to_translate = cols_to_translate
@@ -71,6 +57,20 @@ class Translator():
         text_wrapper=default_prompt_builder,
         **llm_kwargs,
     ):
+        """
+        Example usage:
+        
+        ```python
+        translator = Translator.from_model_id(
+        hf_model_id="google/gemma-3-27b-it",
+        cols_to_translate=cols_to_translate,
+        source_language="English",
+        target_language="Danish",
+        sampling_params=sampling_params,
+        max_seq_len_to_capture=8000,
+        )
+        ```
+        """
         llm = LLM(model=hf_model_id, **llm_kwargs)
 
         return cls(
