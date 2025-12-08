@@ -31,6 +31,21 @@ class Translator():
         text_wrapper: PromptBuilder = default_prompt_builder,
     ):
         
+        """
+        Example usage:
+        
+        ```python
+        translator = Translator.from_model_id(
+        hf_model_id="google/gemma-3-27b-it",
+        cols_to_translate=cols_to_translate,
+        source_language="English",
+        target_language="Danish",
+        sampling_params=sampling_params,
+        max_seq_len_to_capture=8000,
+        )
+        ```
+        """
+        
         self.use_api = use_api
         self.cols_to_translate = cols_to_translate
         self.sampling_params = sampling_params
@@ -42,6 +57,31 @@ class Translator():
         self.llm = None
         if not use_api and hf_model_id is not None:
             self.llm = LLM(model=hf_model_id)
+
+
+    @classmethod
+    def from_model_id(
+        cls,
+        hf_model_id: str,
+        cols_to_translate: List[ColumnSpec],
+        source_language: str,
+        target_language: str,
+        sampling_params: SamplingParams,
+        use_api: bool = False,
+        text_wrapper=default_prompt_builder,
+        **llm_kwargs,
+    ):
+        llm = LLM(model=hf_model_id, **llm_kwargs)
+
+        return cls(
+            use_api=use_api,
+            cols_to_translate=cols_to_translate,
+            source_language=source_language,
+            target_language=target_language,
+            sampling_params=sampling_params,
+            llm=llm,
+            text_wrapper=text_wrapper,
+        )
 
     def call_translation_model_api(self, texts: list[str]) -> list[str]:
         """
