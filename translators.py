@@ -35,7 +35,7 @@ class Translator():
         self.use_api = use_api
         self.cols_to_translate = cols_to_translate
         self.sampling_params = sampling_params
-        self.source_langauge = source_language
+        self.source_language = source_language
         self.target_language = target_language
         self.text_wrapper = text_wrapper
 
