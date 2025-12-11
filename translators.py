@@ -14,7 +14,7 @@ PromptBuilder = Callable[[str, str, str], str]
 
 def default_prompt_builder(text: str, source_language: str, target_language: str) -> str:
     return (
-        f"Translate this text from {source_lang} to {target_lang}. "
+        f"Translate this text from {source_language} to {target_language}. "
         f"Return only the translated text. Nothing else.\n*TEXT:*\n{text}"
     )
 
