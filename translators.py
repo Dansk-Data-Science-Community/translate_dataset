@@ -12,7 +12,7 @@ class ColumnSpec:
 
 PromptBuilder = Callable[[str, str, str], str]
 
-def default_prompt_builder(text: str, source_lang: str, target_lang: str) -> str:
+def default_prompt_builder(text: str, source_language: str, target_language: str) -> str:
     return (
         f"Translate this text from {source_lang} to {target_lang}. "
         f"Return only the translated text. Nothing else.\n*TEXT:*\n{text}"
@@ -164,8 +164,8 @@ class Translator():
         return dataset.map(
             self.translate_batch,
             batched=True,
-            batch_size=32,
-            num_proc=4,
+            batch_size=2,
+            num_proc=None,
         )
 
 
