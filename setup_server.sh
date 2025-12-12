@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "Installing uv via snap..."
-sudo snap install uv --classic
+sudo snap install astral-uv --classic
 
 echo "Running 'uv sync'..."
 uv sync
