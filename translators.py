@@ -98,7 +98,7 @@ class Translator():
 
         prompts = [
             #[{"role": "user", "content": prompt}]
-            {"role": "user", "content": self.text_wrapper(text, self.source_language, self.target_language)}
+            [{"role": "user", "content": self.text_wrapper(text, self.source_language, self.target_language)}]
             for text in texts
         ]
 
