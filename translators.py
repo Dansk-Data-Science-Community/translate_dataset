@@ -125,6 +125,7 @@ class Translator():
         # values: list[dict], each dict[key_to_translate] is list[str]
         for row in values:
             texts = row[key_to_translate]
+            print(f"TEXTS: {texts}")
             translated = self._translate_texts(texts)
             row_copy = {**row, key_to_translate: translated}
             result.append(row_copy)
