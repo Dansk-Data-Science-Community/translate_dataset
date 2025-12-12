@@ -12,3 +12,9 @@ To set up a server with the pre-requisite software, run the `setup_server.sh` sc
 source setup_server.sh
 ```
 Note that you will be prompted to enter a Hugging Face access token in order to access any gated repo that your code uses.  
+
+# Contributions
+Please upload any final datasets to the DDSC organization on Hugging Face. Open an issue to get access :) 
+
+https://huggingface.co/DDSC
+
