@@ -4,3 +4,4 @@ settings.json
 .vscode
 .env
  __pycache__
+ .csv
