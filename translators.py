@@ -102,6 +102,7 @@ class Translator():
             for text in texts
         ]
 
+        print(f"PROMPTS:\n{prompts}")
         llm_output = self.llm.chat(prompts, self.sampling_params)
         return [output.outputs[0].text for output in llm_output]
 
